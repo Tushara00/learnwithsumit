@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/root.css">
     <title>Document</title>
 </head>
 <body id="body">
@@ -15,25 +16,24 @@
    </div>
    <div class="menu">
 <ul> 
-    <li><a>Home</a></li>
+    <li class=""><a href="#"  class="active">HOME</a></li>
     <!--dropdown menu start-->
     <li class="drop-down-li" id="dropdownMenuOne">
-        <a href="#">Reactive accilator <span><i class="fa-solid fa-angle-down"></i></span></a>
+        <a class="active" href="#">Reactive accilator <span><i class="fa-solid fa-angle-down" style="vertical-align: middle;"></i></span></a>
         <ul class="drop-down-menu"   id="dropdownOne">
             <p>Course Details Reactive accilator</p>
-            <div class = "dropdown-container" >  
-              
-                     <div class="singleDropdownMenu" style="display:flex; flex-direction: row;flex-basis:50%">
-            <li style=""><a href="#"><i class="fa-solid fa-desktop" style="vertical-align: middle;"></i><span>drop 1</span></a></li>
+            <div class = "dropdown-container" >           
+                     <div class="singleDropdownMenu" >
+            <li><a href="#"><i class="fa-solid fa-desktop" style="vertical-align: middle;color:red"></i><span>Course</span></a></li>
         </div>
-        <div class="singleDropdownMenu" style="display:flex; flex-direction: row;flex-basis:50%">
-            <li ><a href="#"><i class="fa-solid fa-desktop"></i><span>drop 2</span></a></li>
+        <div class="singleDropdownMenu" >
+            <li ><a href="#"><i class="fa-solid fa-file-lines" style="color:orange"></i></i><span>Projects</span></a></li>
         </div>
-        <div class="singleDropdownMenu" style="display:flex; flex-direction: row;flex-basis:50%">
-            <li style=""><a href="#"><i class="fa-solid fa-desktop"></i><span>Drop 3</span></a></li>
+        <div class="singleDropdownMenu" >
+            <li ><a href="#"><i class="fa-regular fa-folder-closed" style="color:blue"></i></i><span>Modules</span></a></li>
         </div>
-        <div class="singleDropdownMenu" style="display:flex; flex-direction: row;flex-basis:50%">
-            <li style=""><a><i class="fa-solid fa-desktop"></i><span>Drop 4</span></a></li>
+        <div class="singleDropdownMenu">
+            <li ><a><i class="fa-solid fa-keyboard" style="color:blueviolet"></i></i><span>Test</span></a></li>
         </div>
         </div>
         </ul>
@@ -41,9 +41,9 @@
     <!--dropdown menu end-->
 
     <!--dropdown menu 2 start-->
-    <li class="drop-down-li" style="position: relative;" id="dropdownMenuTwo"><a href="#">Redux
-        <span><i class="fa-solid fa-angle-down"></i></span></a>
-        <ul class="drop-down-menu-2 " style="width:350px;max-width: 1; position:absolute;left:50%;transform: translateX(-50%);padding:2rem" id="dropdownTwo">
+    <li class="drop-down-li" style="position: relative;" id="dropdownMenuTwo"><a class="active" href="#">Redux
+        <span><i class="fa-solid fa-angle-down" style="vertical-align: middle;"></i></span></a>
+        <ul class="drop-down-menu-2 " id="dropdownTwo">
             <p>Course Details Redux</p>
             <div  class = "dropdown-container">  
               
@@ -63,34 +63,51 @@
         </ul>
     </li>
     <!--dropdown menu 2 end-->
-    <li><a>React</a></li>
-    <li><div>
-        <i class="fa-regular fa-moon"></i>
-        <i class="fa-regular fa-sun"></i>
+    <li><a class="active">React</a></li>
+    <li><div style="cursor: pointer;">
+       <span  class="night"> <i class="fa-regular fa-moon"></i></span>
+       <span style= "display:none" class="day"> <i class="fa-regular fa-sun"></i></span> 
        </div></li>  
      
 </ul>
    </div>
-   <div class="bar" style="display:none"><i class="fa-solid fa-bars"></i></div>  
+   
 </nav>
+<div class="bar" style="display:non;position:absolute;top:0;right:100px"><i class="fa-solid fa-bars"></i></div> 
     </header>
   
     <main>
 <section class="bg" alt="bg-image" style="">
-<div style="position: absolute;width:100%;height:650px; background-color: #F2F6FA;opacity:.9;" ></div>
+<div class= "banner-overlay" style="" ></div>
 <div class="image-box-container" >
     <div  class= "image-box" >    
-    <img src="assets/images/react-redux-thumb.png">
-    <div class="box-text">
-<h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique autem quibusdam, aspernatur odit velit modi.</h1>
+    <img src="assets/images/rnext-thumb.png">
+    <div class="box-text" style="padding:15px 10px   0">
+<p>We believe that this course's project-based learning approach will help you become a proficient React front-end developer, along with understanding the fundamentals and essentials of React and NextJS from the documentation.</p>
     </div>
+    <div style="display:flex;justify-content: center;padding: 40px 0 10px;">
+    <button style="border:1px solid rgba(0,0,0,.1);padding:10px 20px;border-radius: 25px;background-color: white;"><a><i class="fa-regular fa-circle-play" style="font-size: 25px;vertical-align: middle;"></i><span style="margin-left:.5rem">COURSE DETAILS</span></a></button>
+</div>
+<div style="display:flex;align-items: cente;gap:.5rem;padding:10px 30px
+;color:#99A3B3">
+    <svg style= "" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" class="mr-0 flex-shrink-0 lg:mr-1" height="14" width="14" xmlns="http://www.w3.org/2000/svg"><path d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"></path><path d="M464 336a48 48 0 1 0 96 0 48 48 0 1 0-96 0zm72 112h-48c-4.4 0-8 3.6-8 8v272c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V456c0-4.4-3.6-8-8-8z"></path></svg><span style= "vertical-align: auto;";>The course enrollment period has expired, you cannot enroll now.
+     </span>
+</div>
 </div>
 
 <div class= "image-box" >
     <img src="assets/images/react-redux-thumb.png" ">
-    <div class="box-text">
-<h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique autem quibusdam, aspernatur odit velit modi.</h1>
-    </div>
+    <div class="box-text" style="padding:15px 10px   0">
+        <p>We believe that the project-based teaching approach of this course will help you become a competent Redux programmer, along with understanding the fundamentals and essentials of Redux.</p>
+            </div>
+            <div style="display:flex;justify-content: center;padding: 40px 0 10px;">
+            <button style="border:1px solid rgba(0,0,0,.1);padding:10px 20px;border-radius: 25px;background-color: white;"><a><i class="fa-regular fa-circle-play" style="font-size: 25px;vertical-align: middle;"></i><span style="margin-left:.5rem">COURSE DETAILS</span></a></button>
+        </div>
+        <div style="display:flex;align-items: cente;gap:.5rem;padding:10px 30px
+        ;color:#99A3B3">
+            <svg style= "" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" class="mr-0 flex-shrink-0 lg:mr-1" height="14" width="14" xmlns="http://www.w3.org/2000/svg"><path d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"></path><path d="M464 336a48 48 0 1 0 96 0 48 48 0 1 0-96 0zm72 112h-48c-4.4 0-8 3.6-8 8v272c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V456c0-4.4-3.6-8-8-8z"></path></svg><span style= "vertical-align: auto;";>The course enrollment period has expired, you cannot enroll now.
+             </span>
+        </div>
 </div>
 </div>
 </section>

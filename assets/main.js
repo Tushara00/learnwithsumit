@@ -9,6 +9,32 @@ const dropdownMenuTwo = document.getElementById("dropdownMenuTwo");
 
 const bar = document.querySelector(".bar");
 const menu = document.querySelector(".menu");
+const night = document.querySelector(".night");
+const day = document.querySelector(".day");
+const imgBoxes = document.querySelectorAll(".image-box");
+const bannerOverlay = document.querySelector(".banner-overlay");
+
+
+night.addEventListener("click",function(){
+    console.log( "night clicked");
+    imgBoxes.forEach(function(imgBox){
+        imgBox.style.backgroundColor = ""
+    })
+    bannerOverlay.style.backgroundColor = "#0B1120"
+    night.style.display = "none"
+    day.style.display = "block"
+})
+
+day.addEventListener("click",function(){
+   
+    imgBoxes.forEach(function(imgBox){
+        imgBox.style.backgroundColor = "white"
+    })
+    bannerOverlay.style.backgroundColor = "#F2F6FA"
+    night.style.display = "block"
+    day.style.display = "none"
+})
+
 
 dropdownMenuOne.addEventListener("click", function(){
     dropdownOne.classList.toggle("drop-down-menu-show");
@@ -35,5 +61,40 @@ fullBody.addEventListener("click",function (){
 bar.addEventListener("click", function(){
 menu.classList.toggle ("menu-active");
 })
+/*
+const menuLists = document.querySelectorAll(".active");
+
+    menuLists.forEach(function( menuList){
+        menuList.addEventListener("click", function(){
+            menuList.classList.add("active-list")  
+        });
+        menuList.forEach(function(ml){
+            ml.classList.remove("active-list")  
+        })
+           
+        });
+
+*/
+const menuLists = document.querySelectorAll(".active");
+
+menuLists.forEach(function (menuList) {
+    menuList.addEventListener("click", function () {
+        document.querySelector(".active-list")?.classList.remove("active-list");
+        document.querySelector(".drop-down-menu-show")?.classList.remove("drop-down-menu-show");
+        menuList.classList.add("active-list");
+    });
+});
+
+
+
+        // Add "active-color" to the clicked menuList
+   
+   
+        
+
+
+
+
+
 
 
