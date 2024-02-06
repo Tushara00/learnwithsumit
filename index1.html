@@ -4,35 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        body{
-            min-height:100vh;
-            background-size: cover;
-            background-position: center;
-            background-image:url(assets/images/react-redux-thumb.png);
-        
-            display:flex;
-            justify-content: center;
-            align-items: center;
-        }
-        div{
-            width:480px;
-            height:480px;
-            /*
-            background-color:black;
-            opacity:.8;
-            color:white;
-           backdrop-filter: blur(10px);
-
-           */
-           background-color:rgba(255,255,255,.5);
-       
-            color:white;
-           backdrop-filter: blur(10px);
-        }
-    </style>
 </head>
+<style>
+    *{
+        box-sizing: border-box;
+        margin:0;
+        padding:0;
+        list-style: none;
+    }
+    header{
+        background-color: aqua;
+        width:100%;
+    }
+    nav{
+        margin:auto;
+        width:100%;
+        max-width:1140px;
+        background-color: rgb(72, 255, 0);
+    }
+    .main-ul{
+
+    }
+    .drop-ul{
+        background-color: aliceblue;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 1s ease; /* Add transition for smooth animation */
+    }
+    .active .drop-ul {
+        max-height: 1000px; /* Adjust this value to match the maximum height of your dropdown */
+    }
+    .drop-ul li{
+        padding:2rem;
+    }
+    .main-ul li:not(.drop-ul li){
+        padding:1rem;
+    }
+</style>
 <body>
-   <div>Hello world</div>
+    <header >
+        <nav>
+            <ul class="main-ul">
+                <li>Home</li>
+                <li id="redux">redux
+                    <ul  class="drop-ul">
+                        <li>drop1</li>
+                        <li>drop2</li>
+                        <li>drop3</li>
+                    </ul>
+                </li>
+                <li>react
+                    <ul  class="drop-ul">
+                        <li>drop1</li>
+                        <li>drop2</li>
+                        <li>drop3</li>
+                    </ul>
+                </li>
+                <li>next</li>
+            </ul>
+        </nav>
+    </header>
+    <script>
+        const redux = document.getElementById("redux");
+        redux.addEventListener("click", function(){
+            redux.classList.toggle("active");
+        });
+    </script>
 </body>
 </html>

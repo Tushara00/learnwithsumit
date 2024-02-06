@@ -166,39 +166,43 @@ ul li a{
     vertical-align: middle;
     margin-right:1rem;
 }
+
+
 .drop-down-menu{
-    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    position:absolute;
+ max-height: 0;
     width:350px;
-    top:3rem;
-     position:absolute;
-     left:50%;
-     transform: translateX(-50%)
-     ;padding:2rem;
-     transition:all 3s ease-in
+    top:3rem;   
+     overflow: hidden;
+     transition: max-height 1s ease-in
 }
 .drop-down-menu-2{
-    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    position:absolute;
+    max-height: 0;
     width:350px;
-    top:3rem;
-     position:absolute;
-     left:50%;
-     transform: translateX(-50%)
-     ;padding:2rem;
-     transition:all 3s ease-in
+    top:3rem;   
+     overflow: hidden;
+     transition: max-height 1s ease-in
 }
+.drop-down-menu-show{
+ 
+    max-height: 500px !important;
+    z-index:2;
+    transition:all 1s ease-in
+}
+
+.drop-down-li{
+    position: relative;
+}
+
+
 .dropdown-container{
     display:flex;
     flex-wrap: wrap;
     align-items: center;
     flex-direction: row; 
 }
-.drop-down-menu-show{
-  
-    /*display:block !important;*/
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    z-index:2 ;
-    transition:all 3s ease-in
-}
+
 .drop-down-li p{
     color:var(--mute-text-color);
     font-size: .875rem;
@@ -210,9 +214,7 @@ ul li a{
     display:block !important;
 }
 
-.drop-down-li{
-    position: relative;
-}
+
 .singleDropdownMenu{
     display:flex;
      flex-direction: row;
@@ -222,6 +224,12 @@ ul li a{
 
     overflow: visible!important;  
 }
+
+
+
+
+
+
 @media only screen and (max-width:800px){
     
     
@@ -241,14 +249,7 @@ ul li a{
       .singleDropdownMenu{
           flex-basis:100% !important;
       }
-      .drop-down-menu{
-      top:0px;
-        
-        transition: all 4s ease-in-out;
-      }
-      .drop-down-menu-2{
-        position: relative !important;
-      }
+     
 
       nav{
         flex-direction: column;
@@ -257,6 +258,23 @@ ul li a{
       .bar{
         padding:15px;
       }
+
+      .drop-down-menu{
+        position:initial!important;
+        max-height: 0;
+           width:350px;
+           top:3rem;   
+            overflow: hidden;
+            transition: max-height 1s ease-in
+       }
+       .drop-down-menu-2{
+        position:initial!important;
+           max-height: 0;
+           width:350px;
+           top:3rem;   
+            overflow: hidden;
+            transition: max-height 1s ease-in
+       }
      
 }
 
