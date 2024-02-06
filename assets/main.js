@@ -49,38 +49,18 @@ dropdownMenuTwo.addEventListener("click", function(){
     }
 })
 
-fullBody.addEventListener("click",function (){
-    if(dropdownOne.classList.contains ("drop-down-menu-show") && dropdownTwo.classList.contains ("drop-down-menu-show")){
-        dropdownOne.classList.remove("drop-down-menu-show") 
-       
-    }
-}
 
-)
 
 bar.addEventListener("click", function(){
 menu.classList.toggle ("menu-active");
 })
-/*
-const menuLists = document.querySelectorAll(".active");
 
-    menuLists.forEach(function( menuList){
-        menuList.addEventListener("click", function(){
-            menuList.classList.add("active-list")  
-        });
-        menuList.forEach(function(ml){
-            ml.classList.remove("active-list")  
-        })
-           
-        });
-
-*/
 const menuLists = document.querySelectorAll(".active");
 
 menuLists.forEach(function (menuList) {
     menuList.addEventListener("click", function () {
         document.querySelector(".active-list")?.classList.remove("active-list");
-        document.querySelector(".drop-down-menu-show")?.classList.remove("drop-down-menu-show");
+       
         menuList.classList.add("active-list");
     });
 });

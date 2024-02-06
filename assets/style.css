@@ -167,13 +167,14 @@ ul li a{
     margin-right:1rem;
 }
 .drop-down-menu{
-    display:none;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     width:350px;
-    max-width: 1;
+    top:3rem;
      position:absolute;
      left:50%;
      transform: translateX(-50%)
      ;padding:2rem;
+     transition:all 3s ease-in
 }
 .dropdown-container{
     display:flex;
@@ -182,8 +183,11 @@ ul li a{
     flex-direction: row; 
 }
 .drop-down-menu-show{
-    display:block !important;
-    z-index: 2;
+  
+    /*display:block !important;*/
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    z-index: ;
+    transition:all 3s ease-in
 }
 .drop-down-li p{
     color:var(--mute-text-color);
@@ -236,7 +240,9 @@ ul li a{
           flex-basis:100% !important;
       }
       .drop-down-menu{
-        position: relative !important;
+      top:0px;
+        
+        transition: all 4s ease-in-out;
       }
       .drop-down-menu-2{
         position: relative !important;
