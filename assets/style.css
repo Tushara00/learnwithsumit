@@ -252,9 +252,8 @@ ul li a{
         display:none;
 
     }
-    .image-box-container{
-        margin-right:1rem;
-        margin-left:1rem;
+    .image-box{
+    margin: 0 1rem;
     }
     .bar{display:block!important;
 
