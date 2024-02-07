@@ -65,6 +65,10 @@ menuLists.forEach(function (menuList) {
     });
 });
 
+body.addEventListener("click", function(){
+    document.querySelector(".drop-down-menu-show")?.classList.remove(".drop-down-menu-show");  
+})
+
 
 
         // Add "active-color" to the clicked menuList
