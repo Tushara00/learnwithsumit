@@ -228,18 +228,18 @@ ul li a{
     .drop-down-menu p, .drop-down-menu-2 p{
         padding:1rem 0 0 1rem; 
     }
-.singleDropdownMenu{
-  
+.singleDropdownMenu{ 
     display:flex;
      flex-direction: row;
      flex-basis:50%  
 }
 .custom{
-
     overflow: visible!important;  
 }
 
-
+.image-box{
+    border: 1px solid rgba(71,85,105,.2);
+}
 @media only screen and (max-width:800px){
     
     .logo{
@@ -251,6 +251,10 @@ ul li a{
     .menu{
         display:none;
 
+    }
+    .image-box-container{
+        margin-right:1rem;
+        margin-left:1rem;
     }
     .bar{display:block!important;
 
